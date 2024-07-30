@@ -16,9 +16,9 @@ God Damn Jesus Christ
 # Demo
 <video src="./src/videos/demo_video"></video>
 
-![waybar]("/src/images/waybar.png")
+![waybar](./src/images/waybar.png)
 
-![ncmpcpp]("./src/images/ncmpcp.png")
+![ncmpcpp](./src/images/ncmpcp.png)
 
-![hyprland]("./src/images/hyprland.png")
+![hyprland](./src/images/hyprland.png)
 
