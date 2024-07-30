@@ -13,8 +13,12 @@ God Damn Jesus Christ
 # wallpaper
 ![walpaper](./src/images/wallhaven-l3971q.png)
 
-# Demo Video
+# Demo
 <video src="./src/videos/demo_video"></video>
 
+![waybar]("./src/images/waybar.png")
 
+![ncmpcpp]("./src/images/ncmpcp.png")
+
+![hyprland]("./src/images/hyprland.png")
 
