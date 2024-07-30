@@ -1,0 +1,278 @@
+@import "frappe.css";
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "Hack Nerd Font";
+    font-weight: bold;
+    font-size: 16px;
+    min-height: 10px;
+}
+
+@import "themes/theme.conf";
+
+#window {
+    margin-left: 10px;
+    color: #DBCA1A;
+    /*color: #6A91E8;*/
+    border-radius: 5px;
+    padding: 0px 13px 0px 10px;
+    margin: 4px 8px 4px 5px;
+    /*background-color: #0098B6;*/
+}
+
+
+window#waybar {
+    background: #5B5C68;
+    opacity: 0.8;
+    margin: 5px 5px 5px 5px;
+}
+
+tooltip {
+    background: #11111b;
+    color: #cdd6f4;
+    opacity: 0.8;
+    border-radius: 5px;
+    border-width: 0px;
+}
+
+#workspaces {
+    margin-left: 2px;
+}
+
+#workspaces button {
+    box-shadow: none;
+	text-shadow: none;
+    background: #222436;
+    border-radius: 5px;
+    margin: 4px 3px 4px 3px; /*上右下左*/
+    color: #cdd6f4;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button.active {
+    background: #E5E5E5;
+    color: #313244;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 4px;
+    margin-right: 4px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+    background: #f5c2e7;
+    color: #313244;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#clock {
+    /*background: #a6da95;*/
+    color: #F4F3F9;
+    border-radius: 5px;
+    opacity: 1;
+    margin: 4px 5px 4px 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#network {
+    /*background: #f5c2e7;*/
+    color: #68B9BE;
+    /*border-radius: 5px;*/
+    margin: 4px 5px 4px 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+#bluetooth{
+    /*background: #91d7e3;*/
+    color: #1F96DD;
+    /*border-radius: 5px;*/
+    /*opacity: 1;*/
+    margin: 4px 5px 4px 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+
+}
+#pulseaudio{
+    /*background: #f5a97f;*/
+    color: #E9DCD2;
+    opacity: 1;
+    margin: 4px 5px 4px 5px;
+    border-radius: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+ #pulseaudio-slider { 
+     padding: 0px 0px 0px 0px; 
+     margin: 4px 0px 4px 5px; 
+ } 
+ #pulseaudio-slider slider { 
+     min-height: 0px; 
+     min-width: 0px; 
+     opacity: 0; 
+     background-image: none; 
+     border: none; 
+     box-shadow: none; 
+ } 
+ #pulseaudio-slider trough { 
+     min-height: 0px; 
+     min-width: 100px; 
+     border-radius: 5px; 
+     background-color: #000000; 
+ } 
+ #pulseaudio-slider highlight { 
+     min-width: 0px; 
+     border-radius: 5px; 
+     background-color: #EAF0FA; 
+ } 
+#cpu {
+    color: #CB372E;
+    /*background: #c6a0f6;*/
+    opacity: 1;
+    margin: 4px 5px 4px 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+#memory {
+    color: #6C9B90;
+    /*background: #c6a0f6;*/
+    opacity: 1;
+    margin: 4px 5px 4px 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#temperature {
+    color: #48A615;
+    /*background: #c6a0f6;*/
+    opacity: 1;
+    margin: 4px 5px 4px 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
+#temperature.critical {
+    color: #E02329;
+    /*background: #c6a0f6;*/
+    opacity: 1;
+    margin: 4px 5px 4px 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
+#tray {
+    /*background: #b7bdf8;*/
+    color: #B2B9D1;
+    border-radius: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin: 4px 3px 4px 3px;
+}
+
+#tray menu {
+    background: #B2B9D1;
+    color: #B2B9D1;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+#custom-power {
+    /*background: #dce2f1;*/
+    color: #35CAFB;
+    border-radius: 5px;
+    padding: 0px 13px 0px 2px;
+    margin: 4px 5px 4px 5px;
+}
+
+
+#custom-audio {
+    /*background: #dce2f1;*/
+    color: #D7474B;
+    border-radius: 5px;
+    padding: 0px 2px 0px 2px;
+    margin: 4px 5px 4px 5px;
+}
+
+#custom-quit {
+    /*background: #dce2f1;*/
+    color: #35CAFB;
+    border-radius: 5px;
+    padding: 0px 8px 0px 2px;
+    margin: 4px 5px 4px 5px;
+}
+#custom-lock {
+    /*background: #dce2f1;*/
+    color: #35CAFB;
+    border-radius: 5px;
+    padding: 0px 8px 0px 2px;
+    margin: 4px 5px 4px 5px;
+}
+#custom-reboot {
+    /*background: #dce2f1;*/
+    color: #35CAFB;
+    border-radius: 5px;
+    padding: 0px 8px 0px 2px;
+    margin: 4px 5px 4px 5px;
+}
+#battery {
+    /*background-color: #4285f4;*/
+    color: #9ECE6A;
+    border-radius: 5px;
+    padding: 0px 2px 0px 2px;
+    margin: 4px 5px 4px 5px;
+}
+
+#battery.charging, #battery.plugged {
+    /*background-color: #18c106;*/
+    color: red;
+    /*border-radius: 5px;*/
+    padding: 0px 2px 0px 2px;
+    margin: 4px 5px 4px 5px;
+}
+
+#battery.critical:not(.charging) {
+    border-radius: 5px;
+    padding: 0px 13px 0px 10px;
+    margin: 4px 8px 4px 5px;
+    /*background-color: #f53c3c;*/
+    color: #96C366;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#backlight {
+    color: yellow;
+    /*border-radius: 5px;*/
+    padding: 0px 2px 0px 2px;
+    margin: 4px 8px 4px 5px;
+    /*background-color: #90b1b1;*/
+}
+
+#mpd {
+    color: #2FC3EA;
+    border-radius: 5px;
+    padding: 0px 13px 0px 10px;
+    margin: 4px 8px 4px 5px;
+    background-color: #100E38;
+
+}
+
+#custom-logo {
+    background-color: #423E38;
+    color: #aafaaa;
+    border-radius: 5px;
+    padding: 0px 13px 0px 10px;
+    margin: 4px 8px 4px 5px;
+}
+
+

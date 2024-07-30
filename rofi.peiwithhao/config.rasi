@@ -1,0 +1,25 @@
+
+@theme "/usr/share/rofi/themes/rounded-nord-dark.rasi"  //简约
+//@theme "/usr/share/rofi/themes/windows11-grid-light.rasi"     //win11
+configuration {
+  modes: [ combi ];
+  combi-modes: [ window, drun, run, ssh ];
+}
+
+ 
+/* Insert theme modifications after this */
+entry {
+    placeholder: "顺势堪避纪算祸,逆行方得会元功";
+    cursor: pointer;
+}
+
+element {
+  orientation: horizontal;
+  children: [element-icon, element-text];
+  spacing: 5px;
+}
+
+element-icon {
+    size: 1em;
+}
+

@@ -1,1 +1,20 @@
-# Pass the Readme,Just USE IT.God Damn Jesus Christ(
+# How to Use it ?
+Pass the Readme,JUST USE IT.
+
+God Damn Jesus Christ
+
+# Now We Have
++ hyprland(awasome!Although she have many question,sorrowful🙃)
++ ncmpcpp(is good with mpd 🎹)
++ nvim(a little complex, vim is more clean for me🍳)
++ waybar(A culmination of masterpieces,Just Kidding...🤡)
++ rofi(OK, a "must-have" for flat desktops 🍚)
+
+# wallpaper
+![walpaper](./src/images/wallhaven-l3971q.png)
+
+# Demo Video
+<video src="./src/videos/demo_video"></video>
+
+
+
