@@ -22,3 +22,8 @@ God Damn Jesus Christ
 
 ![hyprland](./src/images/hyprland.png)
 
+
+
+
+
+
