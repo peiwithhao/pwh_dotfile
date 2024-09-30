@@ -6,13 +6,14 @@
     "exclusive": true,
     "passthrough": false,
     "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+        //"image#album-art"
         //"custom/logo",
-        //"cava",
-        "mpd",
-        "hyprland/window",
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "mpd",
+        "cava"
     ],
     "modules-right": [
         "tray",
@@ -47,6 +48,7 @@
             "class<kitty>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
             "class<google-chrome>": "",
             "class<chromium>": "",
+            "class<org.qutebrowser.qutebrowser>": "",
             "class<org.telegram.desktop>": "",
             "class<qq>": "",
             "class<virt-manager>": "",
@@ -72,64 +74,93 @@
             "class<org.kde.konsole> title<.*calcurse.*>": "",
             "class<kitty> title<nvim>": "",
             "class<kitty> title<vim>": "",
-            "class<Neovide>": ""
+            "class<Neovide>": "",
+            "title<.*neomutt.*>": "",
+            "title<.*Zotero.*>": "󰰷"
 
         }
     },
     "hyprland/window": {
         //"format": "{title}",
-        "format": " {title}",
-        //"rewrite": {
-        //    "(.*) - Mozilla Firefox": " $1",
-        //    "(.*) - Google Chrome": " $1",
-        //    "(.*)@myArch(.*)": "  $1",
-        //    "Neovide": " Neovide",
-        //    "ranger": " Ranger",
-        //    "(.*) - Thunar": " $1"
-        //    "(.*) - Thunar": " $1"
-        //
-        //},
+        "format": "{title}",
+        "rewrite": {
+            "(.*)Mozilla Firefox(.*)": "🦊 $1",
+            "(.*) - Google Chrome": "🪿 $1",
+            "(.*)@myArch(.*)": " $1",
+            "Neovide": " Neovide",
+            "ranger": "📁 Ranger",
+            "(.*) - Thunar": "📁 $1",
+            "(.*) - qutebrowser": "🗺️ $1",
+            "(.*)LibreOffice (.*)": "✍️ $1$2"
+
+        },
         "separate-outputs": true
     },
+
     "clock": {
-        //"format": " {:%H:%M 󰃭 %A}",
-        "format": "{:%H:%M %A}",
-        "format-alt": " {:%Y年%m月%d日}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "format": "{:%H:%M (%Z)}  ",
+        "format-alt": "{:%A, %B %d, %Y (%Z)}  ",
+        "tooltip-format": "\n<span size='12pt' font='WenQuanYi Zen Hei Mono'>{calendar}</span>",
         "calendar": {
-            "mode": "year",
-            "mode-mon-col": 3,
-            "weeks-pos": "right",
-            "on-scroll": 1,
-            "on-click-right": "mode",
-            "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "days": "<span color='#ecc6d9'><b>{}</b></span>",
-                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-            }
-        },
-        "actions": {
-            "on-click-right": "mode",
-            "on-click-forward": "tz_up",
-            "on-click-backward": "tz_down",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-        },
-        "on-click-middle": "konsole -e calcurse"
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-scroll-up": "tz_up",
+                    "on-scroll-down": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
     },
+    //"clock": {
+    //    //"format": " {:%H:%M 󰃭 %A}",
+    //    "format": "{:%H:%M %A}",
+    //    "format-alt": " {:%Y年%m月%d日}",
+    //    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    //    "calendar": {
+    //        "mode": "year",
+    //        "mode-mon-col": 3,
+    //        "weeks-pos": "right",
+    //        "on-scroll": 1,
+    //        "on-click-right": "mode",
+    //        "format": {
+    //            "months": "<span color='#ffead3'><b>{}</b></span>",
+    //            "days": "<span color='#ecc6d9'><b>{}</b></span>",
+    //            "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+    //            "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+    //            "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+    //        }
+    //    },
+    //    "actions": {
+    //        "on-click-right": "mode",
+    //        "on-click-forward": "tz_up",
+    //        "on-click-backward": "tz_down",
+    //        "on-scroll-up": "shift_up",
+    //        "on-scroll-down": "shift_down"
+    //    },
+    //    "on-click-middle": "kitty calcurse"
+    //},
 
     "mpd": {
         "format": " {stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {artist} - {title}",
         "format-disconnected": "Disconnected 🎵",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon} Stopped",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}  ",
         "interval": 10,
         "consume-icons": {
             "on": " " // Icon shows only when "consume" is on
         },
         "random-icons": {
-            //"off": "<span color=\"#f53c3c\"></span>", // Icon grayed out when "random" is off
+            "off": "<span color=\"#f53c3c\"></span>", // Icon grayed out when "random" is off
             "on": ""
         },
         "repeat-icons": {
@@ -139,14 +170,14 @@
             "on": "1 "
         },
         "state-icons": {
-            "paused": "",
-            "playing": ""
+            "playing": "",
+            "paused": ""
         },
         "tooltip-format": "MPD (connected)",
         "tooltip-format-disconnected": "MPD (disconnected)",
-        "on-click-right": "konsole -e ncmpcpp",
-        "on-click": "mpc play",
-        "on-click-middle": "mpc pause"
+        "on-click": "mpc toggle",   
+        "on-click-middle": "mpc next",
+        "on-click-rightl": "kitty ncmpcpp"
     },
     "group/group-hardware": {
         "orientation": "inherit",
@@ -179,7 +210,7 @@
         "format-disconnected": "󱚼",
         "format-alt": " {signalStrength}%",
         "interval": 5,
-        "on-click": "konsole -e impala",
+        "on-click": "kitty nmtui",
     },
     "cpu": {
         "interval": 1,
@@ -189,7 +220,7 @@
     },
     //"cpu": {
     //    "interval": 1,
-    //    "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
+    //    "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{icon8}{icon9}{icon10}{icon11}",
     //    "format-icons": [
     //        "<span color='#69ff94'>▁</span>", // green
     //        "<span color='#2aa9ff'>▂</span>", // blue
@@ -284,8 +315,8 @@
          "orientation": "horizontal"
      },
     "tray": {
-        "icon-size": 16,
-        "spacing": 5
+        "icon-size": 21,
+        "spacing": 10
     },
     "custom/logo": {
         "format": "",
@@ -348,17 +379,17 @@
         "balanced": "",
         "power-saver": ""
       }
-    }
+    },
     //"cava": {
-    //   "cava_config": "/home/peiwithhao/cava/config",
-    //    "framerate": 30,
+    //   //"cava_config": "$XDG_CONFIG_HOME/.config/cava/config",
+    //    "framerate": 60,
     //    "autosens": 1,
-    //    "sensitivity": 100,
-    //    "bars": 14,
+    //    //"sensitivity": 2,
+    //    "bars": 24,
     //    "lower_cutoff_freq": 50,
     //    "higher_cutoff_freq": 10000,
-    //    "method": "pulse",
-    //    "source": "auto",
+    //    "method": "fifo",
+    //    "source": "/tmp/mpd.fifo",
     //    "stereo": true,
     //    "reverse": false,
     //    "bar_delimiter": 0,
@@ -368,9 +399,45 @@
     //    "input_delay": 2,
     //    "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
     //    "actions": {
-    //               "on-click-right": "mode"
+    //               "on-click-left": "mode"
     //               }
     //},
 
-
+    "cava": {
+       //"cava_config": "$XDG_CONFIG_HOME/.config/cava/config",
+        "framerate": 60,
+        "autosens": 1,
+        //"sensitivity": 2,
+        "bars": 24,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "fifo",
+        "source": "/tmp/mpd.fifo",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.77,
+        "input_delay": 2,
+        "format-icons" : [
+             "<span color='#2fc3ea'>▁</span>", // green      
+             "<span color='#29cce7'>▂</span>", // blue  
+             "<span color='#22d4e4'>▃</span>", // white 
+             "<span color='#1cdde1'>▄</span>", // white 
+             "<span color='#16e5de'>▅</span>", // yellow
+             "<span color='#10eedb'>▆</span>", // yellow
+             "<span color='#09f6d8'>▇</span>", // orange
+             "<span color='#03ffd5'>█</span>"  // red   
+        ],
+        "actions": {
+                   "on-click-left": "mode"
+                   }
+    },
+    //"image#album-art": {
+    //    "path": "/home/peiwithhao/Pictures/nice_picture/wallhaven-1p398w.jpg",
+    //    "size": 64,
+    //    "interval": 5,
+    //    "on-click": "mpc toggle"
+    //}
 }

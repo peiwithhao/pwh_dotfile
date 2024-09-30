@@ -260,13 +260,23 @@ tooltip {
 
 #mpd {
     color: #2FC3EA;
-    border-radius: 5px;
-    padding: 0px 13px 0px 10px;
-    margin: 4px 8px 4px 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 0px 5px 0px 10px;
+    margin: 4px 0px 4px 5px;
     background-color: #100E38;
 
 }
 
+#cava {
+    /*color: #2FC3EA;*/
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0px 13px 0px 5px;
+    margin: 4px 8px 4px 0px;
+    background-color: #100E38;
+
+}
 #custom-logo {
     background-color: #423E38;
     color: #aafaaa;
