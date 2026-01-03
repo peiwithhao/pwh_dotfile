@@ -5,6 +5,7 @@ require 'config/options'
 require 'config/autocmds'
 require 'config/lazy'
 require 'config/neovide'
+require 'lsp'
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 

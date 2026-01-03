@@ -16,7 +16,7 @@ opt.autoindent = true
 opt.wrap = false
 
 -- UI config opt.number = true -- show absolute number
-opt.relativenumber = false -- add numbers to each line on the left side
+opt.relativenumber = true -- add numbers to each line on the left side
 opt.cursorline = true -- highlight cursor line underneath the cursor horizontally
 opt.splitbelow = true -- open new vertical split bottom
 opt.splitright = true -- open new horizontal splits right
@@ -31,3 +31,8 @@ opt.ignorecase = true -- ignore case in searches by default
 opt.smartcase = true -- but make it case sensitive if an uppercase is entered
 
 opt.cursorline = true
+opt.jumpoptions = 'stack'
+
+-- disable plugin --
+-- vim.g.lazyvim_blink_main = true
+vim.g.lazyvim_blink_main = false

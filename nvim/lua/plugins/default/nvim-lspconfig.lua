@@ -1,0 +1,29 @@
+return {}
+-- return {
+--   'neovim/nvim-lspconfig',
+--   event = 'LazyFile',
+--   dependencies = {
+--     'mason.nvim',
+--     -- { 'mason-org/mason-lspconfig.nvim', config = function() end },
+--     'nvimdev/lspsaga.nvim',
+--   },
+--
+--   opts = {
+--     servers = {
+--       ['*'] = {
+--         keys = {
+--           -- { 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', has = 'definition' },
+--           { 'gd', '<cmd>Lspsaga peek_definition<CR>', has = 'definition' },
+--           { 'gD', '<cmd>Lspsaga peek_type_definition<CR>', has = 'type_definition' },
+--           { 'gh', '<cmd>Lspsaga goto_definition<CR>', has = 'goto definition' },
+--           { 'gH', '<cmd>Lspsaga goto_type_definition<CR>', has = 'goto type_definition' },
+--           { 'gr', '<cmd>Lspsaga finder ref<CR>', has = 'references' },
+--           -- { '<leader>a', '<cmd>Lspsaga outline<CR>', has = 'outline' },
+--           -- vim.keymap.set('n', 'gr', '<cmd>Lspsaga finder tyd<CR>')
+--
+--           -- { 'gr', vim.lsp.buf.references, desc = 'Goto References' },
+--         },
+--       },
+--     },
+--   },
+-- }

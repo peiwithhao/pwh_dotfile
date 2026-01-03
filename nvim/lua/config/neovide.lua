@@ -17,9 +17,6 @@ if vim.g.neovide then
   -- Touch Deadzone
   vim.g.neovide_touch_deadzone = 6.0
 
-  -- refresh Rate
-  vim.g.neovidfe_refresh_rate = 60
-
   -- Floating Shadow
   vim.g.neovide_floating_shadow = true
   vim.g.neovide_floating_z_height = 10
@@ -41,7 +38,7 @@ if vim.g.neovide then
   vim.g.neovide_refresh_rate_idle = 5
   -- Fullscreen
   -- vim.g.neovide_fullscreen = true
-  vim.g.neovide_cursor_animation_length = 0.11
+  vim.g.neovide_cursor_animation_length = 0.2
   vim.g.neovide_cursor_trail_size = 0.8
   -- Antialiasing
   vim.g.neovide_cursor_antialiasing = false
@@ -54,13 +51,14 @@ if vim.g.neovide then
   -- Animate cursor blink
   vim.g.neovide_cursor_smooth_blink = false
   -- Cursor Particles
-  vim.g.neovide_cursor_vfx_mode = 'railgun'
+  -- vim.g.neovide_cursor_vfx_mode = 'railgun'
+  vim.g.neovide_cursor_vfx_mode = ''
   -- Particle Opacity
   vim.g.neovide_cursor_vfx_opacity = 200.0
   -- Particle Lifetime
   vim.g.neovide_cursor_vfx_particle_lifetime = 1.2
   -- partivle Density
-  vim.g.neovide_cursor_vfx_particle_density = 12.0
+  vim.g.neovide_cursor_vfx_particle_density = 0.7
 
   vim.g.neovide_cursor_vfx_particle_phase = 1.5
   vim.g.neovide_cursor_vfx_particle_speed = 10.0

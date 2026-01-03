@@ -17,6 +17,7 @@ require('lazy').setup {
     -- import/override with your plugins
     -- { import = "lazyvim.plugins.extras.coding.copilot" },
     { import = 'plugins.default' },
+    { import = 'plugins.code' },
     { import = 'plugins.ui' },
     { import = 'plugins.write' },
     { import = 'plugins' },
@@ -40,7 +41,11 @@ require('lazy').setup {
         'tohtml',
         'tutor',
         'zipPlugin',
+        'nvim-lspconfig',
+        'mason-lspconfig',
       },
     },
   },
 }
+
+vim.cmd 'colorscheme github_dark_high_contrast'
